@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asus ROG - Technical Prototype</title>
+    <link rel="stylesheet" href="stylesa.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="ROG logo.png" alt="Asus ROG Logo">
+        </div>
+        <nav>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-and-menu">
+            <button class="menu-button">☰ Menu</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to Asus ROG</h1>
+        <p>For Those Who Dare. Explore the best gaming hardware.</p>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <!-- Product Cards will be rendered here -->
+        </div>
+    </section>
+
+    <!-- Modal for Credentials -->
+    <div id="credentialsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Enter Your Payment Details</h2>
+            <form id="credentialsForm">
+                <label for="firstName">First Name (as on the card):</label>
+                <input type="text" id="firstName" name="firstName" required>
+    
+                <label for="lastName">Last Name (as on the card):</label>
+                <input type="text" id="lastName" name="lastName" required>
+    
+                <label for="cardNumber">Credit Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required pattern="\d{16}" title="Enter a valid 16-digit card number">
+    
+                <label for="expiryDate">Expiry Date (MM/YY):</label>
+                <input type="text" id="expiryDate" name="expiryDate" required pattern="\d{2}/\d{2}" title="Enter in the format MM/YY">
+    
+                <label for="cvv">CVC/CVV:</label>
+                <input type="text" id="cvv" name="cvv" required pattern="\d{3,4}" title="Enter a 3- or 4-digit CVV number">
+    
+                <label for="billingAddress">Billing Address:</label>
+                <textarea id="billingAddress" name="billingAddress" required></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Asus ROG. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="scripta.js"></script>
+</body>
+</html>
